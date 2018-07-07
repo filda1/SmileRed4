@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:smileRed4.Infrastructure"
+             x:Class="smileRed4.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <infra:InstanceLocator x:Key="Locator"/>
+
+            <!-- Pallete -->
+            <Color x:Key="primary-back-title-color">#c60e1d</Color>
+            <Color x:Key="primary-title-color">#840913</Color>
+            <!-- Pallete-end -->
+            <Style ApplyToDerivedTypes="true" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Key=primary-back-title-color}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource Key=primary-title-color}"/>
+            </Style>
+
+            <!-- URL -->
+            <x:String x:Key="APIsmileRed">http://restcountries.eu</x:String>
+            <x:String x:Key="APISecurity">http://aurora.somee.com</x:String>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
